@@ -1,0 +1,29 @@
+{
+  "name": "blonded-player",
+  "version": "1.0.0",
+  "description": "Simple music player for nothing but Frank Ocean",
+  "main": "app.js",
+  "browserslist": [
+    "last 1 Chrome version",
+    "Firefox ESR",
+    "last 1 safari version",
+    "last 1 opera version",
+    "last 1 edge version"
+  ],
+  "scripts": {
+    "dev": "parcel ./src/index.html --out-dir dev-dist --no-cache",
+    "serve": "netlify-lambda serve functions",
+    "build": "npm run parcel-build && npm run lambda-build",
+    "parcel-build": "parcel build ./src/index.html --no-source-maps --public-url ./",
+    "lambda-build": "netlify-lambda build functions"
+  },
+  "author": "Hunter Jennings",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "btoa": "^1.2.1"
+  },
+  "devDependencies": {
+    "netlify-lambda": "^1.4.2"
+  }
+}
