@@ -1,0 +1,8 @@
+:root {
+  --space-unit: 10px; // 22px
+  --space--sm: calc(var(--space-unit) * 0.5); // 5px
+  --space--reg: calc(var(--space-unit) * 1); // 10px
+  --space--md: calc(var(--space-unit) * 1.5); // 15px
+  --space--lg: calc(var(--space-unit) * 2.5); // 25px
+  --space--xl: calc(var(--space-unit) * 4); // 40px
+}

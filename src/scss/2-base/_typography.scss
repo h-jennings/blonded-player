@@ -1,0 +1,63 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~
+    TYPOGRAPHY
+  ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@font-face {
+  font-family: 'Iosevka';
+  src: url('../assets/fonts/iosevka-regular.woff2') format('woff2'),
+    url('../assets/fonts/iosevka-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Iosevka';
+  src: url('../assets/fonts/iosevka-light.woff2') format('woff2'),
+    url('../assets/fonts/iosevka-light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Iosevka';
+  src: url('../assets/fonts/iosevka-semibold.woff2') format('woff2'),
+    url('../assets/fonts/iosevka-semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+html {
+  font-family: 'Iosevka', 'Courier New', Courier, monospace;
+  color: var(--black);
+  background-color: var(--gray);
+}
+
+:root {
+  font-size: 20px;
+  --font-primary: 'Iosevka', 'Courier New', Courier, monospace;
+  --base: 1rem;
+  --txt-scale: 1.7;
+  --txt--sm: calc(1rem / var(--txt-scale));
+}
+
+.txt--base {
+  font-size: var(--base);
+  font-weight: 300;
+}
+
+.bolded {
+  font-weight: 600;
+}
+
+.txt--sm {
+  font-weight: 300;
+  font-size: var(--txt--sm);
+  color: var(--white);
+}
+
+a {
+  color: var(--black);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+}

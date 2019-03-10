@@ -24,6 +24,7 @@
     "btoa": "^1.2.1"
   },
   "devDependencies": {
-    "netlify-lambda": "^1.4.2"
+    "netlify-lambda": "^1.4.2",
+    "sass": "^1.17.2"
   }
 }
