@@ -42,7 +42,7 @@ Breakpoints
 }
 
 @mixin for-desktop-down {
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1299px) {
     @content;
   }
 }

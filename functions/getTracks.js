@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const axios = require('axios');
 const btoa = require('btoa');
 

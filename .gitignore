@@ -3,3 +3,4 @@ dev-dist
 .cache
 .env
 package.
+.DS_Store
