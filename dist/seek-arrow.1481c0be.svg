@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="8px" viewBox="0 0 11 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-644.000000, -700.000000)" fill="#000000">
+            <g id="Player" transform="translate(540.000000, 280.000000)">
+                <g id="seek-left" transform="translate(95.000000, 408.000000)">
+                    <polygon id="Path" transform="translate(14.200000, 16.000000) scale(-1, -1) translate(-14.200000, -16.000000) " points="9 12 12.456 13.984 12.488 13.984 12.488 12 15.944 13.984 19.4 16 15.944 17.984 12.488 20 12.488 17.984 12.456 17.984 9 20 9 16"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
