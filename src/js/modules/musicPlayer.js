@@ -6,7 +6,9 @@ export default class Player {
     this.svgs = svgs;
     this.index = 0;
     this.timer = document.querySelector('.text--time__elapsed');
+    this.mobileTimer = document.querySelector('.m-text--time__elapsed');
     this.trackTitle = document.querySelector('.text--track');
+    this.mobileTrackTitle = document.querySelector('.m-text--track');
     this.trackNumber = document.querySelector('.text--track__current');
     this.trackTotalContainer = document.querySelector('.text--track__total');
     this.playBtn = document.querySelector('button.play-button');
@@ -117,6 +119,7 @@ export default class Player {
     const seek = sound.seek();
     const seekRounded = Math.round(seek);
     this.timer.innerHTML = this.formatTime(seekRounded);
+    this.mobileTimer.innerHTML = this.formatTime(seekRounded);
 
     // This function runs every frame to update the audio track progress
     // and stops running once a track is finished playing
@@ -132,6 +135,7 @@ export default class Player {
 
     // Getting the DOM element the the title will go into
     this.trackTitle.innerHTML = track.title;
+    this.mobileTrackTitle.innerHTML = track.title;
 
     // Updates the track total with the total amount in the tracks array
     this.trackTotalContainer.innerHTML = `${trackCount <= 10 ? `0${trackCount}` : trackCount}`;
@@ -149,6 +153,7 @@ export default class Player {
     if (this.index >= this.tracks.length) {
       // If that's true then we want to reset the player and return
       this.timer.innerHTML = '00:00';
+      this.mobileTimer.innerHTML = '00:00';
       this.playBtnImg.src = this.svgs.play;
       this.index = 0;
       this.playBtn.dataset.buttontype = 'play';
@@ -200,6 +205,7 @@ export default class Player {
     if (this.index <= -1) {
       // If so then we just reset the player
       this.timer.innerHTML = '00:00';
+      this.mobileTimer.innerHTML = '00:00';
       this.index = 0;
       this.playBtnImg.src = this.svgs.play;
       this.playBtn.dataset.buttontype = 'play';

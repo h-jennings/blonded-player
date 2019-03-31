@@ -57,6 +57,10 @@ All Homepage Sections
     top: calc(50% - 40px);
   }
 
+  @include for-phone-only {
+    display: none;
+  }
+
   @include for-desktop-down {
 
     .symbol-1,
@@ -87,11 +91,18 @@ nav.c-logo {
   padding-top: 27px;
 
   @include for-desktop-down {
+    padding-bottom: 27px;
+
     img {
       width: 100px;
       height: 100%;
     }
   }
+
+  @include for-phone-only {
+    display: none;
+  }
+
 }
 
 
@@ -108,6 +119,12 @@ nav.c-logo {
   min-height: 488px;
   display: flex;
   position: relative;
+
+  @include for-phone-only {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
 }
 
 .player--container {
@@ -116,12 +133,39 @@ nav.c-logo {
   min-width: 360px;
   display: flex;
   flex-flow: column;
+
+  @include for-phone-only {
+    width: 100%;
+    height: unset;
+
+    .player--art {
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .player--art img {
+      width: 80%;
+      height: auto;
+      max-width: unset;
+    }
+  }
 }
 
 .player--controls {
   background-color: var(--black);
   flex: 1;
   position: relative;
+
+  @include for-phone-only {
+    height: 30vh;
+    flex: unset;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: start;
+    justify-items: center;
+  }
 
   .text--track__number {
     position: absolute;
@@ -142,6 +186,10 @@ nav.c-logo {
   .player-progress--wrapper {
     width: 360px;
     display: flex;
+
+    @include for-phone-only {
+      width: 100%;
+    }
   }
 
   .color-1,
@@ -173,6 +221,11 @@ nav.c-logo {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include for-phone-only {
+      margin-top: 30px;
+      align-items: center;
+    }
   }
 
   button.play-button {
@@ -226,12 +279,43 @@ nav.c-logo {
   right: -140%;
   width: 468px;
   justify-content: space-between;
+
+  @include for-phone-only {
+    display: none;
+  }
+}
+
+// Mobile version of the text container
+// ! Need to add this to the JS
+
+.m-text--container {
+  display: none;
+  position: absolute;
+  justify-content: space-between;
+  bottom: 14px;
+  right: 0;
+  width: 100vw;
+  padding: 0 10px;
+
+  .txt--base {
+    font-size: 13px;
+    color: #ffffff;
+  }
+
+  @include for-phone-only {
+    display: flex;
+  }
 }
 
 .text--artist,
 .text--track,
 .text--time__elapsed,
 .text--time__divider,
-.text--time__total {
+.text--time__total,
+.m-text--artist,
+.m-text--track,
+.m-text--time__elapsed,
+.m-text--time__divider,
+.m-text--time__total {
   display: inline;
 }

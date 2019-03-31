@@ -4,3 +4,5 @@ dev-dist
 .env
 package.
 .DS_Store
+DS_Store
+todo.md
